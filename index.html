@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>좀보이드 생존 가이드 | Project Zomboid Fan Page</title>
+  <meta name="description" content="프로젝트 좀보이드 초보 생존 가이드, 직업 정보, 맵 소개, 유용한 링크 모음">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 상단 메뉴 -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="logo">☣ ZOMBOID<span>KR</span></a>
+      <button id="menu-btn" aria-label="메뉴 열기">☰</button>
+      <nav id="nav">
+        <a href="#about">게임 소개</a>
+        <a href="#guide">생존 가이드</a>
+        <a href="#jobs">직업</a>
+        <a href="#maps">지역</a>
+        <a href="#checklist-section">체크리스트</a>
+        <a href="#links">링크</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- 메인 배너 -->
+    <section id="home" class="hero">
+      <div class="container">
+        <p class="hero-sub">PROJECT ZOMBOID FAN PAGE</p>
+        <h1>노크스 카운티에서<br>살아남는 법</h1>
+        <p class="hero-desc">초보 생존 가이드부터 직업, 지역 정보까지.<br>좀보이드 유저를 위한 비공식 팬 사이트입니다.</p>
+        <div class="hero-btns">
+          <a href="#guide" class="btn btn-primary">생존 가이드 보기</a>
+          <a href="#links" class="btn btn-ghost">유용한 링크</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 게임 소개 -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">게임 소개</h2>
+        <p class="section-desc">Project Zomboid는 좀비가 점령한 세상에서 최대한 오래 살아남는 것이 목표인 아이소메트릭 시점의 오픈월드 생존 게임입니다.</p>
+        <div class="grid grid-3">
+          <article class="card">
+            <h3>🧟 장르</h3>
+            <p>좀비 생존 / 샌드박스</p>
+          </article>
+          <article class="card">
+            <h3>🛠 개발사</h3>
+            <p>The Indie Stone</p>
+          </article>
+          <article class="card">
+            <h3>💻 플랫폼</h3>
+            <p>PC (Steam)</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 생존 가이드 (탭) -->
+    <section id="guide" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">초보 생존 가이드</h2>
+        <p class="section-desc">처음 시작할 때 꼭 알아두면 좋은 기본기입니다. (게임 버전과 설정에 따라 다를 수 있습니다)</p>
+
+        <div class="tabs">
+          <button class="tab-btn active" data-tab="tab-first">첫날</button>
+          <button class="tab-btn" data-tab="tab-food">식량·물</button>
+          <button class="tab-btn" data-tab="tab-base">거점</button>
+          <button class="tab-btn" data-tab="tab-fight">전투·소음</button>
+          <button class="tab-btn" data-tab="tab-health">건강</button>
+        </div>
+
+        <div id="tab-first" class="tab-panel active">
+          <ul class="tip-list">
+            <li>시작하자마자 집 안을 구석구석 뒤져서 가방, 무기, 식량부터 챙기세요.</li>
+            <li>창문 커튼을 닫고 문을 잠가 밖에서 안이 보이지 않게 합니다.</li>
+            <li>무리하게 멀리 나가지 말고 근처 집부터 하나씩 털어 보세요.</li>
+            <li>달리면 소리가 나고 체력도 빨리 닳으니, 필요할 때만 뛰세요.</li>
+          </ul>
+        </div>
+
+        <div id="tab-food" class="tab-panel">
+          <ul class="tip-list">
+            <li>시간이 지나면 수도와 전기가 끊깁니다. 끊기기 전에 욕조나 용기에 물을 받아 두세요.</li>
+            <li>통조림 등 오래 가는 음식을 우선 챙기고, 상한 음식은 먹지 않습니다.</li>
+            <li>정전이 되면 냉장고 음식이 상하니 빨리 먹을 것부터 소비하세요.</li>
+            <li>장기적으로는 농사, 낚시, 사냥으로 식량을 확보해야 합니다.</li>
+          </ul>
+        </div>
+
+        <div id="tab-base" class="tab-panel">
+          <ul class="tip-list">
+            <li>창문과 출입구가 적고 방어하기 쉬운 건물을 거점으로 고르세요.</li>
+            <li>창문을 가려서 밖에서 불빛과 움직임이 보이지 않게 합니다.</li>
+            <li>발전기는 소음이 크므로 좀비를 끌어들일 수 있다는 점을 기억하세요.</li>
+            <li>창고 역할을 할 컨테이너(상자, 가방)를 한곳에 모아 정리하면 편합니다.</li>
+          </ul>
+        </div>
+
+        <div id="tab-fight" class="tab-panel">
+          <ul class="tip-list">
+            <li>좀비 여러 마리를 한꺼번에 상대하지 마세요. 소리를 듣고 계속 몰려옵니다.</li>
+            <li>유리창 깨기, 총소리, 발전기, 경보는 모두 좀비를 부르는 소음입니다.</li>
+            <li>근접 무기는 내구도가 닳으니 예비 무기를 하나 더 들고 다니세요.</li>
+            <li>기본 설정에서 좀비에게 물리는 것은 매우 위험합니다. 거리를 유지하세요.</li>
+          </ul>
+        </div>
+
+        <div id="tab-health" class="tab-panel">
+          <ul class="tip-list">
+            <li>상처를 입으면 가능한 한 빨리 붕대를 감아 치료하세요.</li>
+            <li>배고픔, 갈증, 피로, 우울감 같은 상태 아이콘을 수시로 확인하세요.</li>
+            <li>무거운 짐을 너무 많이 들면 이동이 느려지고 지칩니다.</li>
+            <li>쉬지 않고 오래 활동하면 피로가 쌓이니 안전한 곳에서 잠을 자세요.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 직업 -->
+    <section id="jobs" class="section">
+      <div class="container">
+        <h2 class="section-title">직업 소개</h2>
+        <p class="section-desc">직업에 따라 시작 스킬이 달라집니다. 검색해서 찾아보세요.</p>
+        <input type="search" id="job-search" class="search" placeholder="직업 또는 키워드 검색 (예: 요리, 농사)">
+
+        <div class="grid grid-3" id="job-list">
+          <article class="card job-card">
+            <h3>소방관</h3>
+            <p>체력 위주의 근접 전투에 강한 직업입니다. 초보자가 쓰기 무난합니다.</p>
+          </article>
+          <article class="card job-card">
+            <h3>경찰관</h3>
+            <p>전투와 무기 쪽 보너스가 있는 직업입니다.</p>
+          </article>
+          <article class="card job-card">
+            <h3>공원 관리인</h3>
+            <p>야외 생존, 채집, 덫 쪽에 유리합니다.</p>
+          </article>
+          <article class="card job-card">
+            <h3>목수</h3>
+            <p>목공 스킬로 바리케이드와 가구 제작에 강합니다.</p>
+          </article>
+          <article class="card job-card">
+            <h3>요리사</h3>
+            <p>요리 스킬이 높아 식량 관리에 도움이 됩니다.</p>
+          </article>
+          <article class="card job-card">
+            <h3>농부</h3>
+            <p>농사 스킬로 장기 생존의 식량 문제를 해결하기 좋습니다.</p>
+          </article>
+          <article class="card job-card">
+            <h3>의사</h3>
+            <p>응급처치 스킬이 높아 부상 대응에 유리합니다.</p>
+          </article>
+          <article class="card job-card">
+            <h3>어부</h3>
+            <p>낚시 스킬이 높아 물가 근처 생활에 어울립니다.</p>
+          </article>
+        </div>
+        <p id="job-empty" class="empty-msg" hidden>검색 결과가 없습니다.</p>
+      </div>
+    </section>
+
+    <!-- 지역 -->
+    <section id="maps" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">주요 지역</h2>
+        <p class="section-desc">지역마다 건물 종류와 좀비 밀도가 다릅니다. (버전에 따라 지역이 추가되거나 바뀔 수 있습니다)</p>
+        <div class="grid grid-2">
+          <article class="card">
+            <h3>📍 멀드러 (Muldraugh)</h3>
+            <p>주요 시작 지역 중 하나로, 마을 규모가 있어 물자를 구하기 좋습니다.</p>
+          </article>
+          <article class="card">
+            <h3>📍 웨스트 포인트 (West Point)</h3>
+            <p>상점과 주택이 모여 있는 큰 마을로, 물자가 풍부한 대신 좀비도 많습니다.</p>
+          </article>
+          <article class="card">
+            <h3>📍 리버사이드 (Riverside)</h3>
+            <p>강가에 있는 마을로, 물 확보와 낚시에 유리합니다.</p>
+          </article>
+          <article class="card">
+            <h3>📍 로즈우드 (Rosewood)</h3>
+            <p>비교적 조용한 마을이라 초반 거점을 잡기 좋습니다.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 체크리스트 -->
+    <section id="checklist-section" class="section">
+      <div class="container">
+        <h2 class="section-title">출발 전 체크리스트</h2>
+        <p class="section-desc">체크한 내용은 이 브라우저에 저장됩니다.</p>
+        <ul id="checklist" class="checklist">
+          <li><label><input type="checkbox" id="c1"> 가방과 무기를 챙겼다</label></li>
