@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>모드 충돌 체크 | 좀보이드 생존 가이드</title>
+  <meta name="description" content="창작마당 모음집의 모드 목록으로 충돌 가능한 경우의 수를 계산합니다">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">☣ ZOMBOID<span>KR</span></a>
+      <nav class="simple-nav">
+        <a href="index.html">홈</a>
+        <a href="checker.html">모드 충돌 체크</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <div class="container">
+        <p class="hero-sub">MOD CONFLICT CHECKER</p>
+        <h1>모드 충돌 체크</h1>
+        <p class="hero-desc">창작마당 모음집 주소를 넣으면 모드 수에 따라<br>충돌이 날 수 있는 경우의 수를 계산해 줍니다.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+
+        <p class="step-label">① 창작마당 모음집 주소</p>
+        <div class="input-row">
+          <input type="text" id="collection-url" class="search" placeholder="https://steamcommunity.com/sharedfiles/filedetails/?id=숫자">
+          <button id="load-btn" class="btn btn-primary">불러오기</button>
+        </div>
+        <p id="status" class="status" hidden></p>
+
+        <p class="step-label">② 모드 목록 (불러오면 자동으로 채워지고, 직접 고쳐도 됩니다)</p>
+        <textarea id="mod-text" class="search" placeholder="한 줄에 모드 하나씩 적습니다.&#10;워크샵ID | 제목 | ModID&#10;(ID, 제목, ModID는 있는 것만 적어도 됩니다)&#10;&#10;예) 1234567890 | Example Vehicle Pack | ExampleCars"></textarea>
+        <div class="btn-row">
+          <button id="analyze-btn" class="btn btn-primary">분석하기</button>
+          <button id="sample-btn" class="btn btn-ghost">예시로 해보기</button>
+        </div>
+
+        <details id="fallback" class="fallback">
+          <summary>자동 불러오기가 안 될 때</summary>
+          <ol>
+            <li>브라우저에서 창작마당 모음집 페이지를 엽니다.</li>
+            <li>키보드로 <b>Ctrl + U</b>를 누릅니다. (맥: Option + Command + U) 소스 보기 창이 열립니다.</li>
+            <li><b>Ctrl + A</b>로 전체 선택, <b>Ctrl + C</b>로 복사합니다.</li>
+            <li>위 ② 칸에 붙여넣고 <b>분석하기</b>를 누르면 모드 목록을 자동으로 뽑아냅니다.</li>
+          </ol>
+        </details>
+      </div>
+    </section>
+
+    <section id="result" class="section section-alt" hidden>
+      <div class="container">
+        <h2 class="section-title">분석 결과</h2>
+        <div id="result-body"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">충돌이 의심될 때 직접 확인하는 법</h2>
+        <ul class="tip-list">
+          <li>게임을 실행한 뒤 사용자 폴더의 <b>Zomboid/console.txt</b>를 열어 ERROR나 LUA 오류가 나는 줄을 찾아보세요. 오류 줄에 모드 이름이 같이 찍히는 경우가 많습니다.</li>
+          <li>모드를 절반씩 꺼 가며 문제가 사라지는 쪽을 좁혀 가면 원인 모드를 빠르게 찾을 수 있습니다.</li>
+          <li>모드 로드 순서를 바꿔 보세요. 같은 파일을 덮어쓰는 경우 나중에 로드된 쪽이 적용됩니다. 서버라면 설정 파일의 <b>Mods=</b>, <b>Map=</b> 순서를 확인하세요.</li>
+          <li>각 모드의 설명란과 댓글에 "호환 안 됨", "같이 쓰면 오류" 같은 안내가 있는지 확인하세요.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>이 사이트는 Project Zomboid의 비공식 팬 사이트이며 The Indie Stone과 관련이 없습니다.</p>
+    </div>
+  </footer>
+
+  <script src="rules.js"></script>
+  <script src="checker.js"></script>
+</body>
+</html>
